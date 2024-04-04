@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,27 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLights" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfp-UO-Rn3" userLabel="RedView">
-                                <rect key="frame" x="146" y="125" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                            </view>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a7x-sD-pXC" userLabel="YellowView">
-                                <rect key="frame" x="146" y="259" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WSz-c7-Qrd" userLabel="GreenView">
-                                <rect key="frame" x="146" y="390" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2c-Gv-veJ">
-                                <rect key="frame" x="81" y="595" width="230" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2c-Gv-veJ">
+                                <rect key="frame" x="151.33333333333334" y="508.99999999999994" width="127.66666666666666" height="56.333333333333314"/>
                                 <color key="backgroundColor" systemColor="tintColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -42,7 +26,7 @@
                                             <attributes>
                                                 <font key="NSFont" size="38" name="TimesNewRomanPSMT"/>
                                                 <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -52,9 +36,38 @@
                                     <action selector="switchLightsColors:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dJ2-Cm-EAm"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="rwt-7r-7Hr">
+                                <rect key="frame" x="165" y="89" width="100" height="380"/>
+                                <subviews>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfp-UO-Rn3" userLabel="RedView">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    </view>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7x-sD-pXC" userLabel="YellowView">
+                                        <rect key="frame" x="0.0" y="140" width="100" height="100"/>
+                                        <viewLayoutGuide key="safeArea" id="koq-c9-VJU"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </view>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSz-c7-Qrd" userLabel="GreenView">
+                                        <rect key="frame" x="0.0" y="280" width="100" height="100"/>
+                                        <viewLayoutGuide key="safeArea" id="clq-Bp-vQV"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cfp-UO-Rn3" firstAttribute="height" secondItem="rwt-7r-7Hr" secondAttribute="height" multiplier="0.263158" id="1tl-qu-e72"/>
+                                    <constraint firstItem="cfp-UO-Rn3" firstAttribute="width" secondItem="rwt-7r-7Hr" secondAttribute="width" id="ykh-ve-Gbz"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rwt-7r-7Hr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6jv-gz-i9l"/>
+                            <constraint firstItem="e2c-Gv-veJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PcO-3e-r8c"/>
+                            <constraint firstItem="rwt-7r-7Hr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="S5i-cF-gzQ"/>
+                            <constraint firstItem="e2c-Gv-veJ" firstAttribute="top" secondItem="rwt-7r-7Hr" secondAttribute="bottom" constant="40" id="XTI-up-Rkv"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="greenLight" destination="WSz-c7-Qrd" id="f8M-gV-b6Y"/>
@@ -65,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="55.725190839694655" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="54.375" y="3.1690140845070425"/>
         </scene>
     </scenes>
     <resources>
