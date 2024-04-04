@@ -16,15 +16,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="rwt-7r-7Hr">
+                                <rect key="frame" x="165" y="89" width="100" height="380"/>
+                                <subviews>
+                                    <view alpha="0.29999999999999999" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="cfp-UO-Rn3" userLabel="RedView">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="DSY-bM-fzX"/>
+                                            <constraint firstAttribute="width" constant="100" id="kzN-kA-eKF"/>
+                                        </constraints>
+                                    </view>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7x-sD-pXC" userLabel="YellowView">
+                                        <rect key="frame" x="0.0" y="140" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </view>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSz-c7-Qrd" userLabel="GreenView">
+                                        <rect key="frame" x="0.0" y="280" width="100" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="a7x-sD-pXC" firstAttribute="height" secondItem="cfp-UO-Rn3" secondAttribute="height" id="gnX-dA-66r"/>
+                                    <constraint firstItem="WSz-c7-Qrd" firstAttribute="height" secondItem="cfp-UO-Rn3" secondAttribute="height" id="vwm-3W-KQz"/>
+                                </constraints>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2c-Gv-veJ">
-                                <rect key="frame" x="151.33333333333334" y="508.99999999999994" width="127.66666666666666" height="56.333333333333314"/>
+                                <rect key="frame" x="151.66666666666666" y="539.66666666666663" width="126.99999999999997" height="50.666666666666629"/>
                                 <color key="backgroundColor" systemColor="tintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50.666666666666629" id="bvQ-vj-hhO"/>
+                                    <constraint firstAttribute="width" constant="126.99999999999997" id="sLA-Yk-zgc"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Button">
                                             <attributes>
-                                                <font key="NSFont" size="38" name="TimesNewRomanPSMT"/>
+                                                <font key="NSFont" size="33" name="TimesNewRomanPSMT"/>
                                                 <font key="NSOriginalFont" size="12" name="Helvetica"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
@@ -36,37 +65,14 @@
                                     <action selector="switchLightsColors:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dJ2-Cm-EAm"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="rwt-7r-7Hr">
-                                <rect key="frame" x="165" y="89" width="100" height="380"/>
-                                <subviews>
-                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfp-UO-Rn3" userLabel="RedView">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                                    </view>
-                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7x-sD-pXC" userLabel="YellowView">
-                                        <rect key="frame" x="0.0" y="140" width="100" height="100"/>
-                                        <viewLayoutGuide key="safeArea" id="koq-c9-VJU"/>
-                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                    </view>
-                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSz-c7-Qrd" userLabel="GreenView">
-                                        <rect key="frame" x="0.0" y="280" width="100" height="100"/>
-                                        <viewLayoutGuide key="safeArea" id="clq-Bp-vQV"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="cfp-UO-Rn3" firstAttribute="height" secondItem="rwt-7r-7Hr" secondAttribute="height" multiplier="0.263158" id="1tl-qu-e72"/>
-                                    <constraint firstItem="cfp-UO-Rn3" firstAttribute="width" secondItem="rwt-7r-7Hr" secondAttribute="width" id="ykh-ve-Gbz"/>
-                                </constraints>
-                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="rwt-7r-7Hr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6jv-gz-i9l"/>
-                            <constraint firstItem="e2c-Gv-veJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PcO-3e-r8c"/>
-                            <constraint firstItem="rwt-7r-7Hr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="S5i-cF-gzQ"/>
-                            <constraint firstItem="e2c-Gv-veJ" firstAttribute="top" secondItem="rwt-7r-7Hr" secondAttribute="bottom" constant="40" id="XTI-up-Rkv"/>
+                            <constraint firstItem="rwt-7r-7Hr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="5NM-hE-3bn"/>
+                            <constraint firstItem="e2c-Gv-veJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5at-A3-mRv"/>
+                            <constraint firstItem="rwt-7r-7Hr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="M89-jw-2Ac"/>
+                            <constraint firstItem="e2c-Gv-veJ" firstAttribute="top" secondItem="rwt-7r-7Hr" secondAttribute="bottom" constant="70.666666666666629" id="kA2-eS-kgK"/>
                         </constraints>
                     </view>
                     <connections>
